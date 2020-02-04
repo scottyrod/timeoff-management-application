@@ -6,10 +6,9 @@ phases:
       docker: 18
   pre_build:
     commands:
-      - echo Logging in to Amazon ECR...
-      - aws --version
-      - $(aws ecr get-login --region $AWS_DEFAULT_REGION)
+      - echo Setting image repository URI...
       - REPOSITORY_URI=234236523143.dkr.ecr.us-west-2.amazonaws.com/timeoff-management
+      - echo $REPOSITORY_URI
   build:
     commands:
       - echo Build started on `date`
