@@ -8,7 +8,7 @@ phases:
     commands:
       - echo Logging in to Amazon ECR...
       - aws --version
-      - $(aws ecr get-login --region $AWS_DEFAULT_REGION --no-include-email)
+      - $(aws ecr get-login --region $AWS_DEFAULT_REGION)
       - REPOSITORY_URI=234236523143.dkr.ecr.us-west-2.amazonaws.com/timeoff-management
   build:
     commands:
